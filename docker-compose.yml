@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     networks:
       - app
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
 
   nginx:
     image: nginx
